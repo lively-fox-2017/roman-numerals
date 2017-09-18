@@ -5,7 +5,7 @@ function to_roman (num) {
 
   var tamp = '';
 
-  for(var i = latin.length; i>=0; i--){
+  for(var i = latin.length-1; i>=0; i--){
       while(num >=latin[i]){
         tamp += roman[i];
         num -=latin[i]
