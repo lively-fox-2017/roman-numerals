@@ -1,5 +1,16 @@
 function to_roman (num) {
   // your implementation code here
+  var tampung = ''
+  var angka = [1000, 900, 500,400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+  var aturan = ['m', 'cm', 'd', 'cd', 'c', 'xc', 'l', 'xl', 'x', 'ix', 'v', 'iv', 'i']
+
+  for(var i = 0; i < angka.length; i++) {
+    while(num >= angka[i]) {
+      tampung = tampung + aturan[i]
+      num = num - angka[i]
+    }
+  }
+  return tampung
 }
 
 // Drive code
