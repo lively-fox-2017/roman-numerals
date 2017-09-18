@@ -1,5 +1,40 @@
 function to_roman (num) {
-  // your implementation code here
+
+  // Data
+  let romans = {
+    'M': 1000,
+    'CM': 900,
+    'D': 500,
+    'CD': 400,
+    'C': 100,
+    'XC': 90,
+    'L': 50,
+    'XL': 40,
+    'X': 10,
+    'IX': 9,
+    'V': 5,
+    'IV': 4,
+    'I': 1,
+  };
+
+  // For generating output
+  let output = '';
+
+  // Loop through romans object
+  for (let key in romans) {
+
+    // Generates output
+    while (num >= romans[key]) {
+
+      num -= romans[key];
+      output += key;
+
+    }
+
+  }
+
+  return output;
+
 }
 
 // Drive code
