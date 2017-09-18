@@ -1,5 +1,16 @@
 function to_roman (num) {
-  // your implementation code here
+  var angka = [1,4,5,9,10,40, 50,90, 100, 500, 1000];
+  var roman = ['I','IV','V','IX','X','XL','L','XC','C','D','M'];
+  var angkaRoman = '';
+  for(var i= angka.length-1; i>=0; i--){
+    while(num >= angka[i]){
+      angkaRoman += roman[i];
+      num = num - angka[i];
+    }
+  }
+  return angkaRoman;
+ 
+
 }
 
 // Drive code
