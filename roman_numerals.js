@@ -1,5 +1,18 @@
 function to_roman (num) {
   // your implementation code here
+  var roman = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'];
+  var latin = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000 ]
+
+  var tamp = '';
+
+  for(var i = latin.length; i>=0; i--){
+      while(num >=latin[i]){
+        tamp += roman[i];
+        num -=latin[i]
+      }
+  }
+
+  return tamp;
 }
 
 // Drive code
