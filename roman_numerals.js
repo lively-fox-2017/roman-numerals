@@ -1,5 +1,31 @@
 function to_roman (num) {
   // your implementation code here
+  var roman = {
+    "M" : 1000,
+    "CM" : 900,
+    "D" : 500,
+    "CD" : 400,
+    "C" : 100,
+    "XC" : 90,
+    "L" : 50,
+    "XL" : 40,
+    "X" : 10,
+    "IX" : 9,
+    "V" : 5,
+    "IV" : 4,
+    "I" : 1,
+  };
+  var result = '';
+  for (var prop in roman) {
+    // console.log(`roman.${prop} = ${roman[prop]}`);
+    // console.log(roman[prop])
+    // console.log(prop)
+    while (num >= roman[prop]){
+      result += prop;
+      num -= roman[prop];
+    }
+  }
+  return result;
 }
 
 // Drive code
