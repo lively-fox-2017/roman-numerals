@@ -1,5 +1,13 @@
 function to_roman (num) {
-  // your implementation code here
+  let romNum = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1} // deklarasi library angka romawi
+  let hasil = ''; // string kosong sebagai penampung hasil
+  for (var i in romNum) { // looping sebanyak panjang objek
+    while (num >= romNum[i]) { // selama inputan belum sama dengan key objek ke i, maka
+      hasil += i // masukkan i ke dalam penampung
+      num -=romNum[i] // kurangi inputan dengan key objek ke i
+    }
+  }
+  return hasil;
 }
 
 // Drive code
