@@ -1,5 +1,18 @@
 function to_roman (num) {
   // your implementation code here
+ 	
+ 	const angkaSpesial = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+ 	const romanSpesial = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+ 	let hasil='';
+
+ 	for(let i=0;i<angkaSpesial.length;i++){
+ 		while(num%angkaSpesial[i] <num){
+ 			hasil+=romanSpesial[i];
+ 			num=num-angkaSpesial[i];
+ 		}
+ 	}
+
+ 	return hasil;
 }
 
 // Drive code
